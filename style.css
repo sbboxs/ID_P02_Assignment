@@ -12,31 +12,54 @@
     box-sizing: border-box;
 }
 
-.banner-text{
-    width: 100%;
-    position: absolute;
+/*Top navtigation*/
+li,
+a,
+button{
+    font-family:"Poppines",sans-serif;
+    font-weight:500;
+    font-size:16px;
+    color:#fff; 
+    text-decoration: none;
 }
 
-.banner-text ul{
-    height: 50px;
-    float: right;
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:30px 10%;
 }
 
-.banner-text ul li{
-    display: inline-block;
-    padding: 40px 15px;
-    text-transform: uppercase;
-    color:#fff;
-    font-size:20px;
+.nav-links{
+    list-style: none;
 }
 
-.banner-text h2{
-    text-align:center;
-    color:#fff;
-    font-size:50px;
-    margin-top:20%;
+.nav-links li{
+    display:inline-block;
+    padding:0px 20px;
 }
 
+.nav-links li a{
+    transition:all 0.3s ease 0s;
+}
+
+.nav-links li:hover{
+    background:rgba(255,255,255,0.2);;
+}
+
+button{
+    padding:9px 25px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0%;
+}
+
+button:hover{
+    background-color: rgba(75, 185, 212, 0);
+}
+
+/*动态背景
 .animation-area{
     background: linear-gradient(to left, #894a87, #ba382f);
     width:100%;
@@ -117,13 +140,13 @@
         opacity:1;
     }
 }
+*/
 .section-class{
     display:flex;
     display: grid;
     min-height: 100vh;
     /*卡牌位置*/
     line-height: 1.2;
-    background: var(--clr-neutral-900);
     font-family: sans-serif;   
 }
 
