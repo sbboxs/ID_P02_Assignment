@@ -6,20 +6,12 @@
     --ff--accent: 'Dosis,sans-serif;'
 }
 
-*,
-*::before,
-*::after{
-    box-sizing: border-box;
-}
-
-/*My dearrrrrr animated background .-. pleasee stopppp tilting mee*/
+/*My toy 1: Animated background
 .animation-area{
-    position:fixed;
     z-index:-1;
-
     background: linear-gradient(to left, #036e24, #3feb95);
     width:100%;
-    height:100vh;
+    height:100rem;
 }
 
 .box-area{
@@ -28,7 +20,7 @@
     left:0;
     width:100%;
     height:100%;
-    overflow:hidden;
+
 }
 
 .box-area li{
@@ -46,15 +38,15 @@
 通过调整Animation-delay可调整显示顺序，
 Animation-duration可调整该形状的速度
 shape通过left,width,height和其他属性而定
-*/
-/*shape1*/
+
+/*shape1
 .box-area li:nth-child(1){
     left:86%;
     width:80px;
     height:60px;
     animation-delay:0s;
 }
-/*shape2*/
+/*shape2
 .box-area li:nth-child(2){
     left:12%;
     width:60px;
@@ -62,14 +54,14 @@ shape通过left,width,height和其他属性而定
     animation-delay:1.5s;
     animation-duration:13s;
 }
-/*shape3*/
+/*shape3
 .box-area li:nth-child(3){
     left:70%;
     width:150px;
     height:100px;
     animation-delay:5.5s;
 }
-/*shape4*/
+/*shape4
 .box-area li:nth-child(4){
     left:42%;
     width:150px;
@@ -77,14 +69,14 @@ shape通过left,width,height和其他属性而定
     animation-delay:0s;
     animation-duration:15s;
 }
-/*shape5*/
+/*shape5
 .box-area li:nth-child(5){
     left:65%;
     width:40px;
     height:40px;
     animation-delay:0s;
 }
-/*shape6*/
+/*shape6
 .box-area li:nth-child(6){
     left:15%;
     width:110px;
@@ -92,61 +84,142 @@ shape通过left,width,height和其他属性而定
     animation-delay:3.5s;
 }
 
-/*关键帧*/
+/*关键帧
 @keyframes animate{
-    /*Starting*/
+    /*Starting
     0%{
-        transform:translateY(0) rotate(0deg); /*起始位置与角度*
-        opacity:1; /*不透明度*/
+        transform:translateY(0) rotate(0deg); /*起始位置与角度
+        opacity:1; /*不透明度
     }
-    /*Ending*/
+    /*Ending
     100%{
-        transform:translateY(-800px) rotate(360deg); /*移动距离与角度*/
-        opacity:1; /*不透明度*/
+        transform:translateY(-800px) rotate(360deg); /*移动距离与角度
+        opacity:1; /*不透明度
     }
 }
-
+*/
 /*Top navtigation*/
-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 90px;
+*{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    background: rgba(0,0,0,0.6);
-    border-bottom: 1px solid #fff;
 }
 
-/*Navigation bar*/
-.navigation-bar{
-    display:flex;
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(209, 87, 87);
+    font-family:var(--ff--primary);
+}
+
+.logo{
+    color: rgb(226,226,226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
 }
 
 .nav-links{
-    list-style: none;
-    float: right;
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: space-around;
+    width:30%;
+}
+
+.nav-links li{
+    list-style: none;
 }
 
 .nav-links a{
-    line-height: 70px;
-    color:#fff;
-    padding:12px 30px;
+    color: rgb(226,226,226);
     text-decoration: none;
-    font-size: 14px;
+    letter-spacing: 3px;
     font-weight: bold;
-    text-transform: uppercase;
+    font-size: 14px;
 }
 
-nav ul li a:hover{
-    background: rgba(0,0,0,0.7);
-    border-radius: 7px;
+.burger{
+    display:none;
+    cursor: pointer;
+
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226,226,226);
+    margin:5px;
+    transition: all 0.3s ease;
 }
 
-/*Card*/
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(209, 87, 87);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,6px);
+    
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/*My toy2: Card*/
 .section-class{
     display:flex;
     display: grid;
@@ -155,7 +228,6 @@ nav ul li a:hover{
     line-height: 1.2;
     font-family: sans-serif;   
 }
-
 
 .card{
     color: var(--clr-neutral-100);
