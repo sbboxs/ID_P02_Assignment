@@ -6,6 +6,11 @@
     --ff--accent: 'Dosis,sans-serif;'
 }
 
+html{
+    background: url(/png/wallpaper.jpeg)no-repeat center center fixed;
+    background-size:cover;
+}
+
 /*My toy 1: Animated background
 .animation-area{
     z-index:-1;
@@ -139,8 +144,7 @@ nav{
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 17px;
-    
+    font-size: 17px;  
 }
 
 .nav-links a:hover,
@@ -246,8 +250,7 @@ nav{
 }
 
 .hero{
-    background-image: url(/png/wallpaper.jpeg);
-    background-size: cover;
+
     background-position: top center;
     position: relative;
     z-index: -1;
@@ -330,6 +333,7 @@ nav{
     z-index:-1;
 }
 
+.ProjectArea h1,
 .AboutWebsite h1,
 .AboutMe h1{
     color:crimson;
@@ -337,7 +341,6 @@ nav{
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 0.5rem;
-    margin-top:1rem;
 }
 .AboutMe h2{
     color:grey;
@@ -363,23 +366,72 @@ nav{
     margin-bottom: 10rem;
 }
 
+/*My Portfolio*/
+.Portfolio-Title h1{
+    background-color:pink;
+    position:relative;
+    margin: 0 auto;
+    padding: 0 3rem;
+    text-align: center;
+    margin-top:1rem;
+    color:crimson;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 0.5rem;
+}
 
-/*My toy2: Card
+.cert{
+    padding-top:2rem;
+    text-align: center;
+
+}
+.cert ul li{
+    list-style: none;
+}
+
+.cert ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cert ul li{
+    height: 40vh;
+    flex-grow: 1;
+}
+
+.cert ul li img{
+    width:200px;
+    height:250px;
+}
+
+@media (max-height: 480px){
+    .cert ul li{
+        height: 80vh;
+    }
+
+    .cert ul li img{
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}
+
+/*My toy2: Card*/
 .section-class{
-    display:flex;
     display: grid;
     min-height: 100vh;
-    /*卡牌位置
-    line-height: 1.2;
+    /*卡牌位置*/
+    line-height: 1.8;
     font-family: sans-serif;   
 }
-*/
 
 .card{
     color: var(--clr-neutral-100);
+    background-image: url(/png/IDP.png);
     background-size: cover;
-    width:auto;
-    height:auto;
+    padding: 10rem 0 0;
+    max-width:35ch;
     overflow: hidden;
     /*Animation*/
     transition: transform 500ms ease;
@@ -428,7 +480,7 @@ nav{
     text-decoration: none;
     color: var(--clr-neutral-900);
     background-color:var(--clr-accent-400);
-    padding: 0.4em 1.25em;
+    padding: 0.3em 1.25em;
     border-radius: 0.25em;
 }
 
