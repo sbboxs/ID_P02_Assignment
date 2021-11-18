@@ -190,7 +190,7 @@ nav{
         align-items: center;
         width: 20%;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.4s ease-in;
     }
 
     .nav-links li{
@@ -280,12 +280,12 @@ nav{
     position: relative;
     color: transparent;
     animation: text_reveal 0.5s ease forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 
 .chinese-name h1{
     left:35px;
-    animation-delay:1.7s;
+    animation-delay:1.3s;
 }
 
 .hero .chinese-name span{
