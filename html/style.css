@@ -113,6 +113,7 @@ nav{
     min-height: 8vh;
     background-color: rgb(209, 87, 87);
     font-family:var(--ff--primary);
+    max-width: 100%;
 }
 
 .logo{
@@ -120,6 +121,7 @@ nav{
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
+    border-radius: 50px;
 }
 
 .nav-links{
@@ -137,14 +139,26 @@ nav{
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 17px;
+    
 }
+
+.nav-links a:hover,
+.nav-links a:focus{
+    background-color:rgb(212, 49, 49);
+    border-radius:100px;
+}
+
+.nav-links a:active{
+    color:rgb(243, 155, 155);
+}
+
 
 .burger{
     display:none;
     cursor: pointer;
-
 }
+
 .burger div{
     width: 25px;
     height: 3px;
@@ -170,10 +184,11 @@ nav{
         height: 92vh;
         top: 8vh;
         background-color: rgb(209, 87, 87);
+        opacity:0.8;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 20%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
@@ -221,7 +236,7 @@ nav{
 }
 /*End of Navigation*/
 
-/*HEROO*/
+/*Home Page*/
 .container {
     min-height: 100vh;
     width: 100%;
@@ -235,7 +250,7 @@ nav{
     background-size: cover;
     background-position: top center;
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
 
 .hero::after{
@@ -250,11 +265,18 @@ nav{
     opacity: 0.7;
 }
 
+#hero .hero{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content:center;
+}
+
 .hero h1{
     display: block;
     width: fit-content;
     font-family: var(--ff--primary);
-    font-size: 4rem;
+    font-size: 3rem;
     position: relative;
     color: transparent;
     animation: text_reveal 0.5s ease forwards;
@@ -262,11 +284,11 @@ nav{
 }
 
 .chinese-name h1{
-
-    left:30px;
+    left:35px;
+    animation-delay:1.7s;
 }
 
-.hero h1 span{
+.hero .chinese-name span{
     position: absolute;
     top: 0;
     left: 0;
@@ -293,15 +315,65 @@ nav{
     }
 }
 
-/*My toy2: Card*/
+/*About*/
+/*About me section and About Website*/
+
+.AboutWebsite,
+.AboutMe{
+    background:pink;
+    position:relative;
+    margin: 0 auto;
+    padding: 0 3rem;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 50px;
+    z-index:-1;
+}
+
+.AboutWebsite h1,
+.AboutMe h1{
+    color:crimson;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 0.5rem;
+    margin-top:1rem;
+}
+.AboutMe h2{
+    color:grey;
+    font-size:1.5rem;
+    font-weight:600;
+    letter-spacing: 8px;
+    margin-bottom: 1rem;
+}
+
+.AboutMe .image img{
+    border-radius:50px;
+    width:200px;
+    height:200px;
+    margin-bottom:1rem;
+}
+
+.AboutWebsite p,
+.AboutMe p{
+    color:black;
+    font-size:2rem;
+    font-weight:500;
+    letter-spacing: 0.02rem;
+    margin-bottom: 10rem;
+}
+
+
+/*My toy2: Card
 .section-class{
     display:flex;
     display: grid;
     min-height: 100vh;
-    /*卡牌位置*/
+    /*卡牌位置
     line-height: 1.2;
     font-family: sans-serif;   
 }
+*/
 
 .card{
     color: var(--clr-neutral-100);
