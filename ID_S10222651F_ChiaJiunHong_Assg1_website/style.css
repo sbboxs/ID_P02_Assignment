@@ -7,7 +7,7 @@
 }
 
 html{
-    background: url(/png/wallpaper.jpeg)no-repeat center center fixed;
+    background: url(/png/wallpaper.jpeg)center fixed;
     background-size:cover;
 }
 
@@ -119,6 +119,7 @@ nav{
     background-color: rgb(209, 87, 87);
     font-family:var(--ff--primary);
     max-width: 100%;
+    opacity: 95%;
 }
 
 .logo{
@@ -140,6 +141,7 @@ nav{
 }
 
 .nav-links a{
+
     color: rgb(226,226,226);
     text-decoration: none;
     letter-spacing: 3px;
@@ -320,13 +322,15 @@ nav{
 
 /*About*/
 /*About me section and About Website*/
-
+.About{
+    margin:3rem;
+    margin-top:5rem;
+}
 .AboutWebsite,
 .AboutMe{
     background:pink;
     position:relative;
     margin: 0 auto;
-    padding: 0 3rem;
     margin-top: 2rem;
     text-align: center;
     border-radius: 50px;
@@ -336,15 +340,16 @@ nav{
 .ProjectArea h1,
 .AboutWebsite h1,
 .AboutMe h1{
+    font-family: var(--ff--primary);
     color:crimson;
     font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 8px;
+    letter-spacing: 3px;
     margin-bottom: 0.5rem;
 }
 .AboutMe h2{
     color:grey;
-    font-size:1.5rem;
+    font-size:1.3rem;
     font-weight:600;
     letter-spacing: 8px;
     margin-bottom: 1rem;
@@ -355,15 +360,17 @@ nav{
     width:200px;
     height:200px;
     margin-bottom:1rem;
+    opacity:100%;
 }
 
 .AboutWebsite p,
 .AboutMe p{
     color:black;
+    font-size : 12px;
     font-size:2rem;
     font-weight:500;
     letter-spacing: 0.02rem;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 }
 
 /*My Portfolio*/
@@ -379,6 +386,7 @@ nav{
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 0.5rem;
+    opacity: 80%
 }
 
 .cert{
@@ -419,11 +427,13 @@ nav{
 
 /*My toy2: Card*/
 .section-class{
-    display: grid;
-    min-height: 100vh;
+    display:flex;
+    flex-wrap:wrap;
+    max-height: 75vh;
     /*卡牌位置*/
     line-height: 1.8;
-    font-family: sans-serif;   
+    font-family: sans-serif; 
+    justify-content: center;  
 }
 
 .card{
