@@ -1,3 +1,4 @@
+/*Start of Some variable*/
 :root {
     --clr-neutral-900: hsl(207,19%,9%);
     --clr-neutral-100: hsl(0,0%,100%);
@@ -5,11 +6,14 @@
     --ff--primary: 'poppins,sans-serif;'
     --ff--accent: 'Dosis,sans-serif;'
 }
+/*End of Some variable*/
 
+/*Start of Implement fixed background image for every page*/
 html{
     background: url(/png/wallpaper.jpeg)center fixed;
     background-size:cover;
 }
+/*End of Implement fixed background image for every page*/
 
 /*My toy 1: Animated background
 .animation-area{
@@ -104,13 +108,15 @@ shape通过left,width,height和其他属性而定
 }
 */
 
-/*Top navtigation*/
+/*Start of Top navtigation*/
+/*Removing the annoying default margin and padding*/
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+/*
 nav{
     display: flex;
     justify-content: space-around;
@@ -242,7 +248,7 @@ nav{
 }
 /*End of Navigation*/
 
-/*Home Page*/
+/*Start of Hero Section*/
 .container {
     min-height: 100vh;
     width: 100%;
@@ -288,6 +294,7 @@ nav{
     animation-delay: 1s;
 }
 
+/*Start of Aniamtion of Chinese Name in About page*/
 .chinese-name h1{
     left:35px;
     animation-delay:1.3s;
@@ -319,6 +326,10 @@ nav{
         color: white;
     }
 }
+
+/*End of Aniamtion of Chinese Name in About page*/
+
+/*End of Hero Section*/
 
 /*About*/
 /*About me section and About Website*/
@@ -425,7 +436,7 @@ nav{
     }
 }
 
-/*My toy2: Card*/
+/*Start of Project Card*/
 .section-class{
     display:flex;
     flex-wrap: wrap;
@@ -436,6 +447,8 @@ nav{
     justify-content: space-around;  
     margin:10px;
 }
+
+/*Change background image of my portfolio card*/
 .img1{
     background-image: url(/png/IDP.png);
 }
@@ -443,6 +456,9 @@ nav{
 .img3{
     background-image: url(/png/wallpaper.jpg);
 }
+/*End of changing background img*/
+
+/*Start of card detail*/
 .card{
     border: 2px;
     border-style: solid;
@@ -507,11 +523,11 @@ nav{
 .button:focus{
     background-color: var(--clr-neutral-100);
 }
+/*End of Card Detail*/
 
 /*Mobile*/
-/*media(hover) Check is there device eg.mice */
 
-@media (hover) {
+@media (hover) {                          /*media(hover) Check is there device eg.mice */
     .card-content{
         transform: translateY(65%);
         transition: transform 500ms ease;
@@ -559,3 +575,4 @@ nav{
     transition-delay: 0ms !important;
     }
 }
+/*End of Project Card*/
