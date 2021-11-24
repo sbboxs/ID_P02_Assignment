@@ -293,7 +293,7 @@ nav{
     animation-delay:1.3s;
 }
 
-.hero .chinese-name span{
+.chinese-name span{
     position: absolute;
     top: 0;
     left: 0;
@@ -428,17 +428,26 @@ nav{
 /*My toy2: Card*/
 .section-class{
     display:flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     max-height: 75vh;
     /*卡牌位置*/
     line-height: 1.8;
     font-family: sans-serif; 
-    justify-content: center;  
+    justify-content: space-around;  
+    margin:10px;
 }
-
-.card{
-    color: var(--clr-neutral-100);
+.img1{
     background-image: url(/png/IDP.png);
+}
+.img2,
+.img3{
+    background-image: url(/png/wallpaper.jpg);
+}
+.card{
+    border: 2px;
+    border-style: solid;
+    border-color:palevioletred;
+    color: var(--clr-neutral-100);
     background-size: cover;
     padding: 10rem 0 0;
     max-width:35ch;
@@ -501,6 +510,7 @@ nav{
 
 /*Mobile*/
 /*media(hover) Check is there device eg.mice */
+
 @media (hover) {
     .card-content{
         transform: translateY(65%);
