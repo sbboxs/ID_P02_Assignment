@@ -114,6 +114,7 @@ shape通过left,width,height和其他属性而定
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: var(--ff--primary);
 }
 
 nav{
@@ -122,7 +123,6 @@ nav{
     align-items: center;
     min-height: 8vh;
     background-color: rgb(209, 87, 87);
-    font-family:var(--ff--primary);
     max-width: 100%;
     opacity: 95%;
 }
@@ -575,3 +575,71 @@ nav{
     }
 }
 /*End of Project Card*/
+.contact{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form{
+    max-width:700px;
+    width: 100%;
+    background: rgb(241, 138, 160);
+    opacity: 93%;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.contact-form .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.contact-form form .user-details{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    width: calc(100% / 2 -20px);
+}
+
+.user-details .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input,
+.user-details .input-box textarea
+{
+    display: block;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.user-details .input-box textarea{
+    resize: vertical;
+    resize:
+}
+form .submit-button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(80deg,rgb(197, 31, 95), rgb(243, 95, 164),rgb(197, 31, 95));
+}
+
+
+/*Start of Contact Section*/
