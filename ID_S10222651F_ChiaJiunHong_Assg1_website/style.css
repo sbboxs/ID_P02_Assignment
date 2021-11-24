@@ -271,7 +271,7 @@ nav{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(77, 58, 51);
+    background-color: rgb(77, 45, 72);
     opacity: 0.7;
 }
 
@@ -385,13 +385,13 @@ nav{
 
 /*My Portfolio*/
 .Portfolio-Title h1{
-    background-color:pink;
+    background-color:rgb(235, 190, 227);
     position:relative;
     margin: 0 auto;
     padding: 0 3rem;
     text-align: center;
     margin-top:1rem;
-    color:crimson;
+    color:rgb(255, 255, 255);
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 5px;
@@ -399,6 +399,7 @@ nav{
     opacity: 80%
 }
 
+/*Start of Displaying Cert*/
 .cert{
     padding-top:2rem;
     text-align: center;
@@ -419,8 +420,8 @@ nav{
 }
 
 .cert ul li img{
-    width:200px;
-    height:250px;
+    width:250px;
+    height:300px;
 }
 
 @media (max-height: 480px){
@@ -431,16 +432,16 @@ nav{
     .cert ul li img{
         width: 100%;
         max-height: 75vh;
-        min-width: 0;
+
     }
 }
+/*End of Displaying Cert*/
 
 /*Start of Project Card*/
 .section-class{
     display:flex;
     flex-wrap: wrap;
     max-height: 75vh;
-    /*卡牌位置*/
     line-height: 1.8;
     font-family: sans-serif; 
     justify-content: space-around;  
@@ -459,9 +460,6 @@ nav{
 
 /*Start of card detail*/
 .card{
-    border: 2px;
-    border-style: solid;
-    border-color:palevioletred;
     color: var(--clr-neutral-100);
     background-size: cover;
     padding: 10rem 0 0;
