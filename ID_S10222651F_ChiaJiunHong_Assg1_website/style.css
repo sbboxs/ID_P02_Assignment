@@ -1,8 +1,5 @@
 /*Start of Some variable*/
 :root {
-    --clr-neutral-900: hsl(207,19%,9%);
-    --clr-neutral-100: hsl(0,0%,100%);
-    --clr-accent-400:  hsl(142,90%,61%);
     --ff--primary: 'poppins,sans-serif;'
     --ff--accent: 'Dosis,sans-serif;'
 }
@@ -257,7 +254,6 @@ nav{
 }
 
 .hero{
-
     background-position: top center;
     position: relative;
     z-index: -1;
@@ -352,7 +348,7 @@ nav{
 .AboutWebsite h1,
 .AboutMe h1{
     font-family: var(--ff--primary);
-    color:rgb(252, 197, 249);
+    color:rgb(252, 197, 240);
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -385,7 +381,7 @@ nav{
 
 /*My Portfolio*/
 .Portfolio-Title h1{
-    background-color:rgb(235, 190, 227);
+    background-color:rgb(245, 156, 205);
     position:relative;
     margin: 0 auto;
     padding: 0 3rem;
@@ -432,7 +428,6 @@ nav{
     .cert ul li img{
         width: 100%;
         max-height: 75vh;
-
     }
 }
 /*End of Displaying Cert*/
@@ -456,11 +451,11 @@ nav{
 .img3{
     background-image: url(/png/wallpaper.jpg);
 }
-/*End of changing background img*/
+/*End of changing card background img*/
 
 /*Start of card detail*/
 .card{
-    color: var(--clr-neutral-100);
+    color: white;
     background-size: cover;
     padding: 10rem 0 0;
     max-width:35ch;
@@ -482,7 +477,7 @@ nav{
 .card-title {
     position: relative;
     width: max-content;
-    bottom:20px;
+    bottom:5px;
 }
 
 .card-title::after{
@@ -492,7 +487,7 @@ nav{
     left: calc(var(--padding) * -1);
     bottom:-2px;
     width: calc(100% + var(--padding));
-    background:var(--clr-accent-400);
+    background:rgb(240, 70, 98);
     transform-origin: left;
     transition: transform 500ms ease;
 }
@@ -503,28 +498,27 @@ nav{
 }
 
 .card-body{
-    color:rbg(255 255 255 / 0.05);
+    color: rbg(255 255 255 / 0.05);
 }
 
 .button{
     cursor: pointer;
     display: inline;
     text-decoration: none;
-    color: var(--clr-neutral-900);
-    background-color:var(--clr-accent-400);
+    color: black;
+    background-color:rgb(248, 197, 206);
     padding: 0.3em 1.25em;
     border-radius: 0.25em;
 }
 
 .button:hover,
 .button:focus{
-    background-color: var(--clr-neutral-100);
+    background-color: rgb(253, 18, 77);
 }
 /*End of Card Detail*/
-
 /*Mobile*/
-
-@media (hover) {                          /*media(hover) Check is there device eg.mice */
+/*Check is there device like mice */
+@media (hover) {    
     .card-content{
         transform: translateY(65%);
         transition: transform 500ms ease;
