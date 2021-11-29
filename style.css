@@ -222,13 +222,13 @@ nav{
     animation-delay:1.3s;
 }
 
-.chinese-name span{
+.animation-part span{
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 0%;
-    background-color: rgb(241, 82, 117);
+    background-color: rgb(241, 82, 169);
     animation: text_reveal_box 1s ease;
     animation-delay: 1s;
 }
