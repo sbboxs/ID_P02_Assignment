@@ -263,14 +263,13 @@ nav{
 /*About me section and About Website*/
 .About{
     margin:3rem;
-    margin-top:5rem;
+
 }
+
 .AboutWebsite,
 .AboutMe{
     background:rgb(235, 146, 161);
     position:relative;
-    margin: 0 auto;
-    margin-top: 2rem;
     text-align: center;
     border-radius: 20px;
     opacity: 90%;
@@ -403,6 +402,7 @@ nav{
     overflow: hidden;
     /*Animation*/
     transition: transform 500ms ease;
+    padding-bottom: 2px;
 }
 
 .card-content {
