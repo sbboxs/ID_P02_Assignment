@@ -22,4 +22,5 @@ const navSlide= () => {
 
 }
 
+//Call the method name again to activate it, like in Python
 navSlide();
