@@ -9,103 +9,11 @@
 html{
     background: url(/png/wallpaper.jpeg)center fixed;
     background-size:cover;
+    width: 100%;
+    height: 100%;
 }
 /*End of Implement fixed background image for every page*/
 
-/*My toy 1: Animated background
-.animation-area{
-    z-index:-1;
-    background: linear-gradient(to left, #036e24, #3feb95);
-    width:100%;
-    height:100rem;
-}
-
-.box-area{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-
-}
-
-.box-area li{
-    position:absolute;
-    display:block;
-    list-style:none;
-    width:25px;
-    height:25px;
-    background:rgba(255,255,255,0.2);
-    animation:animate 20s linear infinite;
-    bottom: -150px;
-}
-
-/*
-通过调整Animation-delay可调整显示顺序，
-Animation-duration可调整该形状的速度
-shape通过left,width,height和其他属性而定
-
-/*shape1
-.box-area li:nth-child(1){
-    left:86%;
-    width:80px;
-    height:60px;
-    animation-delay:0s;
-}
-/*shape2
-.box-area li:nth-child(2){
-    left:12%;
-    width:60px;
-    height:30px;
-    animation-delay:1.5s;
-    animation-duration:13s;
-}
-/*shape3
-.box-area li:nth-child(3){
-    left:70%;
-    width:150px;
-    height:100px;
-    animation-delay:5.5s;
-}
-/*shape4
-.box-area li:nth-child(4){
-    left:42%;
-    width:150px;
-    height:150px;
-    animation-delay:0s;
-    animation-duration:15s;
-}
-/*shape5
-.box-area li:nth-child(5){
-    left:65%;
-    width:40px;
-    height:40px;
-    animation-delay:0s;
-}
-/*shape6
-.box-area li:nth-child(6){
-    left:15%;
-    width:110px;
-    height:110px;
-    animation-delay:3.5s;
-}
-
-/*关键帧
-@keyframes animate{
-    /*Starting
-    0%{
-        transform:translateY(0) rotate(0deg); /*起始位置与角度
-        opacity:1; /*不透明度
-    }
-    /*Ending
-    100%{
-        transform:translateY(-800px) rotate(360deg); /*移动距离与角度
-        opacity:1; /*不透明度
-    }
-}
-*/
-
-/*Start of Top navtigation*/
 /*Removing the annoying default margin and padding*/
 *{
     margin: 0px;
@@ -120,8 +28,10 @@ nav{
     align-items: center;
     min-height: 8vh;
     background-color: rgb(209, 87, 107);
-    max-width: 100%;
     opacity: 95%;
+    position: fixed;
+    width:100%;
+    z-index: 1;
 }
 
 .logo{
@@ -161,7 +71,6 @@ nav{
     color:rgb(243, 155, 155);
 }
 
-
 .burger{
     display:none;
     cursor: pointer;
@@ -196,19 +105,38 @@ nav{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 16%;
+        width: 20%;
         transform: translateX(100%);
         transition: transform 0.4s ease-in;
     }
 
-    .nav-links li{
+    .nav-links li{            
         opacity: 0;
     }
+
 
     .burger{
         display: block;
     }
 
+    .nav-links a{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width:610px) {
+    .nav-links a{
+        font-size: 12px;
+    }
+
+    .nav-links {
+        width:25%;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
 }
 
 .nav-active{
@@ -306,6 +234,11 @@ nav{
     animation-delay: 1s;
 }
 
+@media screen and (max-width:520px) {
+    .hero h1{
+        font-size: 2rem;
+    }
+}
 @keyframes text_reveal_box{
     50%{
         width: 100%;
@@ -348,17 +281,17 @@ nav{
 .AboutWebsite h1,
 .AboutMe h1{
     font-family: var(--ff--primary);
-    color:rgb(252, 197, 240);
+    color:rgb(240, 217, 235);
     font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 0.5rem;
 }
 .AboutMe h2{
-    color:rgb(252, 197, 249);
+    color:rgb(240, 217, 235);
     font-size:1.3rem;
     font-weight:600;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     margin-bottom: 1rem;
 }
 
@@ -372,7 +305,7 @@ nav{
 .AboutWebsite p,
 .AboutMe p{
     color:rgb(218, 241, 255);
-    font-size : 10px;
+    font-size : 8px;
     font-size:2rem;
     font-weight:500;
     letter-spacing: 3px;
@@ -421,13 +354,21 @@ nav{
 }
 
 @media (max-height: 480px){
+
     .cert ul li{
-        height: 80vh;
+        height: 75vh;
     }
 
     .cert ul li img{
         width: 100%;
-        max-height: 75vh;
+        max-height: vh;
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .Portfolio-Title h1{
+        font-size: 1.8rem;
     }
 }
 /*End of Displaying Cert*/
@@ -550,22 +491,6 @@ nav{
     }
 }
 
-/*if user reject animation*/
-@media (prefers-reduced-motion: reduce)
-{
-    *,
-    *::before
-    *::after {
-    animation-duration: 0.01ms
-    !important;
-    animation-iteration-count: 1
-    !important;
-    transition-duration: 0.01ms
-    !important;
-    scroll-behavior: auto !important;
-    transition-delay: 0ms !important;
-    }
-}
 /*End of Project Card*/
 
 /*Start of contact section*/
@@ -579,7 +504,7 @@ nav{
 .contact-form{
     max-width:700px;
     width: 100%;
-    background: rgb(241, 138, 160);
+    background: rgb(231, 108, 156);
     opacity: 93%;
     padding: 25px 30px;
     border-radius: 5px;
