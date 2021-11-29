@@ -456,13 +456,14 @@ nav{
 }
 /*End of Card Detail*/
 /*Mobile*/
-/*Check is there device like mice */
+/*When hover*/
 @media (hover) {    
     .card-content{
         transform: translateY(65%);
         transition: transform 500ms ease;
     }
-
+    /*Hover, and select with tab*/
+    /*Setting Animation*/
     .card:hover .card-content,
     .card:focus-within .card-content{
         transform: translateY(0);
@@ -488,8 +489,83 @@ nav{
         transform: scaleX(0);
     }
 }
-
 /*End of Project Card*/
+
+/*Start on IDP Details*/
+.IDP{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity : 90%;
+}
+
+.IDP-Detail{
+    max-width:700px;
+    width: 100%;
+    background: rgb(231, 108, 156);
+    opacity: 93%;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.IDP-Detail h1{
+    font-size: 30px;
+    color:rgb(241, 0, 0);
+}
+
+.IDP-Detail p{
+    padding-top: 5px;;
+    margin:3px;
+    font-size: 20px;
+}
+
+.Header-of-IDP{
+    padding-bottom: 10px;;
+}
+
+.IDP-Pic{
+    text-align: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.IDP-Brochure,
+.IDP-Poster{
+    display: flex;
+    justify-content: center;
+    flex-direction : row;
+    padding-bottom : 20px;
+}
+
+.IDP-Brochure img,
+.IDP-Poster img{
+    width: 100%;
+}
+
+.IDP-Brochure ul li,
+.IDP-Poster ul li{
+    list-style: none;
+}
+
+.IDP-Brochure ul h1,
+.IDP-Poster ul h1{
+    width: 100%;
+    background-color:rgb(245, 156, 205);
+    position:relative;
+    margin: 0 auto;
+    padding: 0 3rem;
+    text-align: center;
+    margin-top:1rem;
+    color:rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+    opacity: 80%
+}
+/*End of IDP Details*/
 
 /*Start of contact section*/
 .contact{
@@ -559,23 +635,4 @@ form .submit-button input{
 }
 
 /*End of Contact Section*/
-.IDP{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
 
-.IDP-Detail{
-    max-width:700px;
-    width: 100%;
-    background: rgb(231, 108, 156);
-    opacity: 93%;
-    padding: 25px 30px;
-    border-radius: 5px;
-}
-
-.IDP-Pic{
-    height:100px;
-    width:100px;
-}
