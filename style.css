@@ -551,7 +551,7 @@ nav{
 
 .IDP-Brochure ul h1,
 .IDP-Poster ul h1{
-    width: 100%;
+    max-width: 100%;
     background-color:rgb(245, 156, 205);
     position:relative;
     margin: 0 auto;
@@ -564,6 +564,20 @@ nav{
     letter-spacing: 5px;
     margin-bottom: 0.5rem;
     opacity: 80%
+}
+
+@media screen and (max-width: 480px){
+
+    .IDP-Detail h1{
+        font-size: 20px;
+    }
+    .IDP-Detail p{
+        font-size: 15px;
+    }
+    .IDP-Brochure ul h1,
+    .IDP-Poster ul h1{
+        font-size: 1.5rem;
+    }
 }
 /*End of IDP Details*/
 
