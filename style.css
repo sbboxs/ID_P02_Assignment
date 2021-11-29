@@ -7,7 +7,7 @@
 
 /*Start of Implement fixed background image for every page*/
 html{
-    background: url(png/wallpaper.jpeg)center fixed;
+    background: url(png/wallpaper.jpeg) center fixed;  /*why u bully me*/
     background-size:cover;
     width: 100%;
     height: 100%;
