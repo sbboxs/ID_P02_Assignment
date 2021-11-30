@@ -396,7 +396,8 @@ nav{
     color: white;
     background-size: cover;
     padding: 10rem 0 0;
-    max-width:35ch;
+    max-width:100%;
+    width:35ch;
     overflow: hidden;
     /*Animation*/
     transition: transform 500ms ease;
