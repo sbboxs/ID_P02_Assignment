@@ -8,7 +8,7 @@ const navSlide= () => {
         //Toggle
         nav.classList.toggle('nav-active');
 
-        //Animation
+        //Animation- Allow the button fade in one by one.
         navLinks.forEach((link,index)=>{
             if(link.style.animation){
                 link.style.animation='';
